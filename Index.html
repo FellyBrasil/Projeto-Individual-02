@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/Style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.0/css/all.min.css">
+    <link href="http://fonts.cdnfonts.com/css/black-family" rel="stylesheet"> 
+    <link href="http://fonts.cdnfonts.com/css/black-family" rel="stylesheet">                
+    <title>Mensagem Oculta</title>
+</head>
+
+<body background="imagens/dragon-vs-warrior.png">
+    <main>
+    <div class="container">
+        <h1>Criptografie</h1>
+        <h2>Decodificador de textos com: Base64 e Cifra de césar</h2>
+        <h3></h3>
+        <form action="">
+            <textarea name="mensagem" id="texto" placeholder="Digite sua mensagem aqui..."></textarea>
+            <label id="selecionar" for="chave"> chave:</label>
+            <select class="select" id="select">
+                <option value="selecione" disabled selected>Selecionar</option>
+                <option value="base64">Base64</option>
+                <option value="cifra">Cifra de césar</option>
+            </select>
+            <div class="chave">
+                <label class="chave" for="range">Escolha a Chave</label>
+                <div class="slider-range">
+                    <input type="range" value="1" min="1" max="26" class="range" id="range"
+                        oninput="rangenumber.value=value" />
+                    <input type="number" value="1" id="rangenumber" min="1" max="26" oninput="range.value=value" />
+                </div>
+            </div>
+            <div id="opção">
+                <div class="decisão">
+                <input name="escolha" type="radio" value="codificar" id="codified">
+               <label id="descrição"> Codificar</label>
+               </div>
+               <div class="decisão">
+                <input name="escolha" type="radio" value="decodificar"
+                id="decodified"> 
+                <label id="descrição">Decodificar</label></div>
+           
+             </div>
+             <textarea id="resultado" class="resultado da mensagem" placeholder="Mensagem Criptografada"></textarea>
+            <div class="botao">
+            <button type="button" class="botao_submit" id="botao_submit"
+                name="botao_submit">Codificar Mensagem!</button>
+            </div>
+            
+        </form>
+     </div>
+    </main>
+    <script src="JS/code.js"></script>
+</body>
+</html>
